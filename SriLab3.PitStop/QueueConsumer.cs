@@ -48,7 +48,7 @@ namespace SriLab3.PitStop
                     channel.BasicPublish("", "formula-queue", null, Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(message2)));
                     Console.WriteLine("Zgoda na zjazd");
                 }
-                if(jsonMessage.CisnienieOpon>98 || jsonMessage.TemperaturaOleju > 98)
+                if(jsonMessage.CisnienieOpon==95 || jsonMessage.TemperaturaOleju == 95)
                 {
                     channel.BasicPublish("", "mechanic-queue", null, body);
                     Console.WriteLine("Wysłano powiadomienie do mechaników");

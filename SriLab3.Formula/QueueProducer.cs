@@ -36,10 +36,10 @@ namespace SriLab3.Formula
 
             while (true)
             {
-                var message = new { TemperaturaOleju = 100+count, CisnienieOpon = 100+count, Wiadomosc = "", Czas = DateTime.Now };
+                var message = new { TemperaturaOleju = 95+count, CisnienieOpon = 95+count, Wiadomosc = "", Czas = DateTime.Now };
                 if (count % 10 == 0)
                 {
-                    message = new { TemperaturaOleju = 100 + count, CisnienieOpon = 100 + count, Wiadomosc = "Proszę o zjazd", Czas = DateTime.Now };
+                    message = new { TemperaturaOleju = 95 + count, CisnienieOpon = 95 + count, Wiadomosc = "Proszę o zjazd", Czas = DateTime.Now };
                     var consumer = new EventingBasicConsumer(channel3);
                     consumer.Received += (sender, e) =>
                     {
